@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <OLKitePrintSDK.h>
 
 @interface ViewController ()
 
@@ -25,5 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonAction:(id)sender {
+    [OLKitePrintSDK setAPIKey:@"a45bf7f39523d31aa1ca4ecf64d422b4d810d9c4" withEnvironment:OLKitePrintSDKEnvironmentSandbox];
+    OLKiteViewController *kite = [[OLKiteViewController alloc] initWithAssets:@[]];
+    [self presentViewController:kite animated:YES completion:NULL];
+}
 
 @end
